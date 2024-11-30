@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocaMais.Domain", "LocaMais.Domain\LocaMais.Domain.csproj", "{BAFC040E-AFEC-4EDA-86F9-D61F90AA9A7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocaMais.Domain", "LocaMais.Domain\LocaMais.Domain.csproj", "{BAFC040E-AFEC-4EDA-86F9-D61F90AA9A7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocaMais.Teste", "LocaMais.Teste\LocaMais.Teste.csproj", "{A26C15BD-72CE-4371-AC7E-56D145513215}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocaMais.Repository", "LocaMais.Repository\LocaMais.Repository.csproj", "{2C4235A0-CF96-4112-8907-984ED30B466D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocaMais.Service", "LocaMais.Service\LocaMais.Service.csproj", "{11091489-CB9B-4187-A88E-CEFFF737FA0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{BAFC040E-AFEC-4EDA-86F9-D61F90AA9A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAFC040E-AFEC-4EDA-86F9-D61F90AA9A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAFC040E-AFEC-4EDA-86F9-D61F90AA9A7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A26C15BD-72CE-4371-AC7E-56D145513215}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A26C15BD-72CE-4371-AC7E-56D145513215}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A26C15BD-72CE-4371-AC7E-56D145513215}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A26C15BD-72CE-4371-AC7E-56D145513215}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C4235A0-CF96-4112-8907-984ED30B466D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C4235A0-CF96-4112-8907-984ED30B466D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C4235A0-CF96-4112-8907-984ED30B466D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C4235A0-CF96-4112-8907-984ED30B466D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11091489-CB9B-4187-A88E-CEFFF737FA0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11091489-CB9B-4187-A88E-CEFFF737FA0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11091489-CB9B-4187-A88E-CEFFF737FA0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11091489-CB9B-4187-A88E-CEFFF737FA0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
