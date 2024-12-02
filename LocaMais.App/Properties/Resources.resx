@@ -121,6 +121,9 @@
   <data name="CityLocaMais" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CityLocaMais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RenterLocaMais" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RenterLocaMais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LogoLocaMais" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoLocaMais.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,8 +133,8 @@
   <data name="TypePropertyLocaMais" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TypePropertyLocaMais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UserLocaMais" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\UserLocaMais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BackGroundLocaMais" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BackGroundLocaMais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LandlordLocaMais" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LandlordLocaMais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,10 +142,10 @@
   <data name="PropertyLocaMais" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PropertyLocaMais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RenterLocaMais" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RenterLocaMais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="UserLocaMais" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UserLocaMais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BackGroundLocaMais" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BackGroundLocaMais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CadastrosLocaMais" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CadastrosLocaMais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

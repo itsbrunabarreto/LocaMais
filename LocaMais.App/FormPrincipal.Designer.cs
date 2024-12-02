@@ -57,72 +57,78 @@
             // cadastrosToolStripMenuItem
             // 
             cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { usuárioToolStripMenuItem, toolStripMenuItem2, imóvelToolStripMenuItem, tipoImóvelToolStripMenuItem, toolStripMenuItem1, próprietárioToolStripMenuItem, inquilinoToolStripMenuItem, cidadeToolStripMenuItem, toolStripMenuItem3, contratoToolStripMenuItem });
+            cadastrosToolStripMenuItem.Image = Properties.Resources.CadastrosLocaMais;
             cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            cadastrosToolStripMenuItem.Size = new Size(88, 24);
+            cadastrosToolStripMenuItem.Size = new Size(108, 24);
             cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
             // usuárioToolStripMenuItem
             // 
             usuárioToolStripMenuItem.Image = Properties.Resources.UserLocaMais;
             usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            usuárioToolStripMenuItem.Size = new Size(171, 26);
+            usuárioToolStripMenuItem.Size = new Size(224, 26);
             usuárioToolStripMenuItem.Text = "Usuário";
+            usuárioToolStripMenuItem.Click += usuárioToolStripMenuItem_Click;
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(168, 6);
+            toolStripMenuItem2.Size = new Size(221, 6);
             // 
             // imóvelToolStripMenuItem
             // 
             imóvelToolStripMenuItem.Image = Properties.Resources.PropertyLocaMais;
             imóvelToolStripMenuItem.Name = "imóvelToolStripMenuItem";
-            imóvelToolStripMenuItem.Size = new Size(171, 26);
+            imóvelToolStripMenuItem.Size = new Size(224, 26);
             imóvelToolStripMenuItem.Text = "Imóvel";
             // 
             // tipoImóvelToolStripMenuItem
             // 
             tipoImóvelToolStripMenuItem.Image = Properties.Resources.TypePropertyLocaMais;
             tipoImóvelToolStripMenuItem.Name = "tipoImóvelToolStripMenuItem";
-            tipoImóvelToolStripMenuItem.Size = new Size(171, 26);
+            tipoImóvelToolStripMenuItem.Size = new Size(224, 26);
             tipoImóvelToolStripMenuItem.Text = "Tipo Imóvel";
+            tipoImóvelToolStripMenuItem.Click += tipoImóvelToolStripMenuItem_Click;
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(168, 6);
+            toolStripMenuItem1.Size = new Size(221, 6);
             // 
             // próprietárioToolStripMenuItem
             // 
             próprietárioToolStripMenuItem.Image = Properties.Resources.LandlordLocaMais;
             próprietárioToolStripMenuItem.Name = "próprietárioToolStripMenuItem";
-            próprietárioToolStripMenuItem.Size = new Size(171, 26);
+            próprietárioToolStripMenuItem.Size = new Size(224, 26);
             próprietárioToolStripMenuItem.Text = "Proprietário";
+            próprietárioToolStripMenuItem.Click += próprietárioToolStripMenuItem_Click;
             // 
             // inquilinoToolStripMenuItem
             // 
             inquilinoToolStripMenuItem.Image = Properties.Resources.RenterLocaMais;
             inquilinoToolStripMenuItem.Name = "inquilinoToolStripMenuItem";
-            inquilinoToolStripMenuItem.Size = new Size(171, 26);
+            inquilinoToolStripMenuItem.Size = new Size(224, 26);
             inquilinoToolStripMenuItem.Text = "Inquilino";
+            inquilinoToolStripMenuItem.Click += inquilinoToolStripMenuItem_Click;
             // 
             // cidadeToolStripMenuItem
             // 
             cidadeToolStripMenuItem.Image = Properties.Resources.CityLocaMais;
             cidadeToolStripMenuItem.Name = "cidadeToolStripMenuItem";
-            cidadeToolStripMenuItem.Size = new Size(171, 26);
+            cidadeToolStripMenuItem.Size = new Size(224, 26);
             cidadeToolStripMenuItem.Text = "Cidade";
+            cidadeToolStripMenuItem.Click += cidadeToolStripMenuItem_Click;
             // 
             // toolStripMenuItem3
             // 
             toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(168, 6);
+            toolStripMenuItem3.Size = new Size(221, 6);
             // 
             // contratoToolStripMenuItem
             // 
             contratoToolStripMenuItem.Image = Properties.Resources.ContractLocaMais;
             contratoToolStripMenuItem.Name = "contratoToolStripMenuItem";
-            contratoToolStripMenuItem.Size = new Size(171, 26);
+            contratoToolStripMenuItem.Size = new Size(224, 26);
             contratoToolStripMenuItem.Text = "Contrato";
             // 
             // FormPrincipal

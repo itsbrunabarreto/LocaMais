@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using LocaMais.App.Cadastros;
+using LocaMais.App.Models;
 using LocaMais.Domain.Base;
 using LocaMais.Domain.Entities;
 using LocaMais.Repository.Context;
@@ -57,34 +59,37 @@ namespace LocaMais.App.Infra
             Services.AddScoped<IBaseService<TipoImovel>, BaseService<TipoImovel>>();
             Services.AddScoped<IBaseService<Contrato>, BaseService<Contrato>>();
             #endregion
-            /*
+            
             #region Formulários
             Services.AddTransient<CadastroUsuario, CadastroUsuario>();
             Services.AddTransient<CadastroCidade, CadastroCidade>();
             Services.AddTransient<CadastroProprietario, CadastroProprietario>();
             Services.AddTransient<CadastroInquilino, CadastroInquilino>();
-            Services.AddTransient<CadastroImovel, CadastroImovel>();
+            //Services.AddTransient<CadastroImovel, CadastroImovel>();
             Services.AddTransient<CadastroTipoImovel, CadastroTipoImovel>();
-            Services.AddTransient<CadastroContrato, CadastroContrato>();
+            //Services.AddTransient<CadastroContrato, CadastroContrato>();
             #endregion
 
             #region Mapping
             Services.AddSingleton(new MapperConfiguration(config =>
             {
+                config.CreateMap<Usuario, UsuarioModel>();
+
                 config.CreateMap<Cidade, CidadeModel>()
                 .ForMember(c => c.NomeEstado, c => c.MapFrom(x => $"{x.Nome}/{x.Estado}"));
 
-                config.CreateMap<Cliente, ClienteModel>()
+                config.CreateMap<Proprietario, ProprietarioModel>()
                 .ForMember(c => c.Cidade, c => c.MapFrom(x => $"{x.Cidade!.Nome}/{x.Cidade!.Estado}"))
                 .ForMember(c => c.IdCidade, c => c.MapFrom(x => x.Cidade!.Id));
 
-                config.CreateMap<Usuario, UsuarioModel>();
-
+                config.CreateMap<Inquilino, InquilinoModel>()
+                .ForMember(c => c.Cidade, c => c.MapFrom(x => $"{x.Cidade!.Nome}/{x.Cidade!.Estado}"))
+                .ForMember(c => c.IdCidade, c => c.MapFrom(x => x.Cidade!.Id));
 
             }).CreateMapper());
 
             ServicesProvider = Services.BuildServiceProvider();
-            #endregion*/
+            #endregion
 
         }
     }
