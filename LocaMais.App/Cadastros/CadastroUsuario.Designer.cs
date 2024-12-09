@@ -43,7 +43,7 @@
             // 
             // TabControlCadastro
             // 
-            TabControlCadastro.Size = new Size(794, 383);
+            TabControlCadastro.Size = new Size(770, 378);
             // 
             // TabPageCadastro
             // 
@@ -55,7 +55,7 @@
             TabPageCadastro.Controls.Add(txtSenha);
             TabPageCadastro.Controls.Add(txtLogin);
             TabPageCadastro.Controls.Add(txtNome);
-            TabPageCadastro.Size = new Size(786, 348);
+            TabPageCadastro.Size = new Size(762, 343);
             TabPageCadastro.Controls.SetChildIndex(txtNome, 0);
             TabPageCadastro.Controls.SetChildIndex(txtLogin, 0);
             TabPageCadastro.Controls.SetChildIndex(txtSenha, 0);
@@ -65,17 +65,21 @@
             TabPageCadastro.Controls.SetChildIndex(txtDataCadastro, 0);
             TabPageCadastro.Controls.SetChildIndex(txtDataLogin, 0);
             // 
+            // TabPageConsulta
+            // 
+            TabPageConsulta.Size = new Size(762, 343);
+            // 
             // btnExcluir
             // 
-            btnExcluir.Location = new Point(626, 296);
+            btnExcluir.Location = new Point(674, 272);
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(619, 296);
+            btnEditar.Location = new Point(667, 272);
             // 
             // btnNovo
             // 
-            btnNovo.Location = new Point(547, 296);
+            btnNovo.Location = new Point(595, 272);
             // 
             // txtNome
             // 
@@ -155,7 +159,7 @@
             txtSenha.MaxLength = 32767;
             txtSenha.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtSenha.Name = "txtSenha";
-            txtSenha.PasswordChar = '\0';
+            txtSenha.PasswordChar = '*';
             txtSenha.PrefixSuffixText = null;
             txtSenha.ReadOnly = false;
             txtSenha.RightToLeft = RightToLeft.No;
@@ -267,7 +271,7 @@
             txtDataCadastro.Name = "txtDataCadastro";
             txtDataCadastro.PasswordChar = '\0';
             txtDataCadastro.PrefixSuffixText = null;
-            txtDataCadastro.ReadOnly = false;
+            txtDataCadastro.ReadOnly = true;
             txtDataCadastro.RightToLeft = RightToLeft.No;
             txtDataCadastro.SelectedText = "";
             txtDataCadastro.SelectionLength = 0;
@@ -298,7 +302,7 @@
             txtDataLogin.Name = "txtDataLogin";
             txtDataLogin.PasswordChar = '\0';
             txtDataLogin.PrefixSuffixText = null;
-            txtDataLogin.ReadOnly = false;
+            txtDataLogin.ReadOnly = true;
             txtDataLogin.RightToLeft = RightToLeft.No;
             txtDataLogin.SelectedText = "";
             txtDataLogin.SelectionLength = 0;
@@ -315,7 +319,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(776, 445);
             Location = new Point(0, 0);
             Name = "CadastroUsuario";
             Text = "Cadastro de Usuario";

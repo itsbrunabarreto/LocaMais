@@ -73,6 +73,16 @@ namespace LocaMais.App.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baseline_fingerprint_black_24dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_fingerprint_black_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CadastrosLocaMais {
             get {
                 object obj = ResourceManager.GetObject("CadastrosLocaMais", resourceCulture);
@@ -103,6 +113,16 @@ namespace LocaMais.App.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap do_utilizador {
+            get {
+                object obj = ResourceManager.GetObject("do-utilizador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LandlordLocaMais {
             get {
                 object obj = ResourceManager.GetObject("LandlordLocaMais", resourceCulture);
@@ -116,6 +136,16 @@ namespace LocaMais.App.Properties {
         internal static System.Drawing.Bitmap LogoLocaMais {
             get {
                 object obj = ResourceManager.GetObject("LogoLocaMais", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Panel {
+            get {
+                object obj = ResourceManager.GetObject("Panel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

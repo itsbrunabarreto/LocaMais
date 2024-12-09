@@ -22,10 +22,6 @@ namespace LocaMais.Service.Validators
                 .NotNull().WithMessage("Por favor, informe o endereço do imóvel.")
                 .MaximumLength(100).WithMessage("O endereço do imóvel pode ter no máximo 100 caracteres.");
 
-            RuleFor(i => i.PrecoAluguel)
-                .NotEmpty().WithMessage("Por favor, informe o preço do aluguel do imóvel.")
-                .NotNull().WithMessage("Por favor, informe o preço do aluguel do imóvel.");
-
         }
     }
 }

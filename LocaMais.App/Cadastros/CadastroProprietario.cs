@@ -114,7 +114,7 @@ namespace LocaMais.App.Cadastros
             txtCpf.Text = linha?.Cells["CPF"].Value.ToString();
             txtTelefone.Text = linha?.Cells["Telefone"].Value.ToString();
             txtEmail.Text = linha?.Cells["Email"].Value.ToString();
-            txtEndereco.Text = linha?.Cells["Endereço"].Value.ToString();
+            txtEndereco.Text = linha?.Cells["Endereco"].Value.ToString();
             txtBairro.Text = linha?.Cells["Bairro"].Value.ToString();
             cboCidade.Text = linha?.Cells["Cidade"].Value.ToString();
         }

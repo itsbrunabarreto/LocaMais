@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using LocaMais.App.Cadastros;
 using LocaMais.App.Models;
+using LocaMais.App.Outros;
 using LocaMais.Domain.Base;
 using LocaMais.Domain.Entities;
 using LocaMais.Repository.Context;
@@ -59,15 +60,16 @@ namespace LocaMais.App.Infra
             Services.AddScoped<IBaseService<TipoImovel>, BaseService<TipoImovel>>();
             Services.AddScoped<IBaseService<Contrato>, BaseService<Contrato>>();
             #endregion
-            
+
             #region Formulários
+            Services.AddTransient<Login, Login>();
             Services.AddTransient<CadastroUsuario, CadastroUsuario>();
             Services.AddTransient<CadastroCidade, CadastroCidade>();
             Services.AddTransient<CadastroProprietario, CadastroProprietario>();
             Services.AddTransient<CadastroInquilino, CadastroInquilino>();
-            //Services.AddTransient<CadastroImovel, CadastroImovel>();
+            Services.AddTransient<CadastroImovel, CadastroImovel>();
             Services.AddTransient<CadastroTipoImovel, CadastroTipoImovel>();
-            //Services.AddTransient<CadastroContrato, CadastroContrato>();
+            Services.AddTransient<CadastroContrato, CadastroContrato>();
             #endregion
 
             #region Mapping
@@ -85,6 +87,27 @@ namespace LocaMais.App.Infra
                 config.CreateMap<Inquilino, InquilinoModel>()
                 .ForMember(c => c.Cidade, c => c.MapFrom(x => $"{x.Cidade!.Nome}/{x.Cidade!.Estado}"))
                 .ForMember(c => c.IdCidade, c => c.MapFrom(x => x.Cidade!.Id));
+
+                config.CreateMap<TipoImovel, TipoImovelModel>()
+                .ForMember(c => c.Nome, c => c.MapFrom(x => x.Nome));
+
+                config.CreateMap<Imovel, ImovelModel>()
+                .ForMember(c => c.Cidade, c => c.MapFrom(x => $"{x.Cidade!.Nome}/{x.Cidade!.Estado}"))
+                .ForMember(c => c.IdCidade, c => c.MapFrom(x => x.Cidade!.Id))  
+                .ForMember(c => c.TipoImovel, c => c.MapFrom(x => x.TipoImovel!.Nome))
+                .ForMember(c => c.IdTipoImovel, c => c.MapFrom(x => x.TipoImovel!.Id))
+                .ForMember(c => c.Proprietario, c => c.MapFrom(x => x.Proprietario!.Nome))
+                .ForMember(c => c.IdProprietario, c => c.MapFrom(x => x.Proprietario!.Id));
+
+                config.CreateMap<Contrato, ContratoModel>()
+               .ForMember(c => c.Inquilino, c => c.MapFrom(x => x.Inquilino!.Nome))
+               .ForMember(c => c.IdInquilino, c => c.MapFrom(x => x.Inquilino!.Id))
+               .ForMember(c => c.Proprietario, c => c.MapFrom(x => x.Proprietario!.Nome))
+               .ForMember(c => c.IdProprietario, c => c.MapFrom(x => x.Proprietario!.Id))
+               .ForMember(c => c.Imovel, c => c.MapFrom(x => x.Imovel!.Nome))
+               .ForMember(c => c.IdImovel, c => c.MapFrom(x => x.Imovel!.Id));
+
+
 
             }).CreateMapper());
 

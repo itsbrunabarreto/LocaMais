@@ -21,28 +21,14 @@ namespace LocaMais.Repository.Mapping
                 .IsRequired()
                 .HasColumnType("decimal(18,2)");
 
-            builder.Property(prop => prop.DataInicio)
-                .IsRequired()
-                .HasColumnType("datetime");
+            builder.HasOne(prop => prop.Imovel);
 
-            builder.Property(prop => prop.DataFim)
-                .IsRequired()
-                .HasColumnType("datetime");
 
-            builder.HasOne(prop => prop.Imovel)
-                .WithMany()
-                .HasForeignKey("ImovelId")
-                .IsRequired();
+            builder.HasOne(prop => prop.Inquilino);
 
-            builder.HasOne(prop => prop.Inquilino)
-                .WithMany()
-                .HasForeignKey("InquilinoId")
-                .IsRequired();
 
-            builder.HasOne(prop => prop.Proprietario)
-                .WithMany()
-                .HasForeignKey("ProprietarioId")
-                .IsRequired();
+            builder.HasOne(prop => prop.Proprietario);
+            
 
         }
     }

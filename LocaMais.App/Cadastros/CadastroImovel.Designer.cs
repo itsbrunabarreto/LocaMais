@@ -34,6 +34,8 @@
             txtPrecoAluguel = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
             chkDisponivel = new ReaLTaiizor.Controls.MaterialCheckBox();
             cboTipoImovel = new ReaLTaiizor.Controls.MaterialComboBox();
+            cboCidade = new ReaLTaiizor.Controls.MaterialComboBox();
+            cboProprietario = new ReaLTaiizor.Controls.MaterialComboBox();
             TabControlCadastro.SuspendLayout();
             TabPageCadastro.SuspendLayout();
             TabPageConsulta.SuspendLayout();
@@ -45,6 +47,8 @@
             // 
             // TabPageCadastro
             // 
+            TabPageCadastro.Controls.Add(cboProprietario);
+            TabPageCadastro.Controls.Add(cboCidade);
             TabPageCadastro.Controls.Add(cboTipoImovel);
             TabPageCadastro.Controls.Add(chkDisponivel);
             TabPageCadastro.Controls.Add(txtPrecoAluguel);
@@ -58,6 +62,8 @@
             TabPageCadastro.Controls.SetChildIndex(txtPrecoAluguel, 0);
             TabPageCadastro.Controls.SetChildIndex(chkDisponivel, 0);
             TabPageCadastro.Controls.SetChildIndex(cboTipoImovel, 0);
+            TabPageCadastro.Controls.SetChildIndex(cboCidade, 0);
+            TabPageCadastro.Controls.SetChildIndex(cboProprietario, 0);
             // 
             // txtNome
             // 
@@ -67,7 +73,7 @@
             txtNome.BackgroundImageLayout = ImageLayout.None;
             txtNome.CharacterCasing = CharacterCasing.Normal;
             txtNome.Depth = 0;
-            txtNome.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtNome.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtNome.HideSelection = true;
             txtNome.Hint = "Nome";
             txtNome.LeadingIcon = null;
@@ -108,7 +114,7 @@
             txtId.Name = "txtId";
             txtId.PasswordChar = '\0';
             txtId.PrefixSuffixText = null;
-            txtId.ReadOnly = false;
+            txtId.ReadOnly = true;
             txtId.RightToLeft = RightToLeft.No;
             txtId.SelectedText = "";
             txtId.SelectionLength = 0;
@@ -161,7 +167,7 @@
             txtPrecoAluguel.BeepOnError = false;
             txtPrecoAluguel.CutCopyMaskFormat = MaskFormat.IncludeLiterals;
             txtPrecoAluguel.Depth = 0;
-            txtPrecoAluguel.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtPrecoAluguel.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtPrecoAluguel.HidePromptOnLeave = false;
             txtPrecoAluguel.HideSelection = true;
             txtPrecoAluguel.Hint = "Preço Aluguel";
@@ -221,7 +227,7 @@
             cboTipoImovel.DropDownHeight = 174;
             cboTipoImovel.DropDownStyle = ComboBoxStyle.DropDownList;
             cboTipoImovel.DropDownWidth = 121;
-            cboTipoImovel.Font = new Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboTipoImovel.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
             cboTipoImovel.ForeColor = Color.FromArgb(222, 0, 0, 0);
             cboTipoImovel.FormattingEnabled = true;
             cboTipoImovel.Hint = "Tipo de Imóvel";
@@ -234,6 +240,52 @@
             cboTipoImovel.Size = new Size(406, 49);
             cboTipoImovel.StartIndex = 0;
             cboTipoImovel.TabIndex = 8;
+            // 
+            // cboCidade
+            // 
+            cboCidade.AutoResize = false;
+            cboCidade.BackColor = Color.FromArgb(255, 255, 255);
+            cboCidade.Depth = 0;
+            cboCidade.DrawMode = DrawMode.OwnerDrawVariable;
+            cboCidade.DropDownHeight = 174;
+            cboCidade.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboCidade.DropDownWidth = 121;
+            cboCidade.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboCidade.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cboCidade.FormattingEnabled = true;
+            cboCidade.Hint = "Cidade/Estado";
+            cboCidade.IntegralHeight = false;
+            cboCidade.ItemHeight = 43;
+            cboCidade.Location = new Point(527, 226);
+            cboCidade.MaxDropDownItems = 4;
+            cboCidade.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cboCidade.Name = "cboCidade";
+            cboCidade.Size = new Size(236, 49);
+            cboCidade.StartIndex = 0;
+            cboCidade.TabIndex = 9;
+            // 
+            // cboProprietario
+            // 
+            cboProprietario.AutoResize = false;
+            cboProprietario.BackColor = Color.FromArgb(255, 255, 255);
+            cboProprietario.Depth = 0;
+            cboProprietario.DrawMode = DrawMode.OwnerDrawVariable;
+            cboProprietario.DropDownHeight = 174;
+            cboProprietario.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboProprietario.DropDownWidth = 121;
+            cboProprietario.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboProprietario.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cboProprietario.FormattingEnabled = true;
+            cboProprietario.Hint = "Proprietário";
+            cboProprietario.IntegralHeight = false;
+            cboProprietario.ItemHeight = 43;
+            cboProprietario.Location = new Point(30, 226);
+            cboProprietario.MaxDropDownItems = 4;
+            cboProprietario.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cboProprietario.Name = "cboProprietario";
+            cboProprietario.Size = new Size(474, 49);
+            cboProprietario.StartIndex = 0;
+            cboProprietario.TabIndex = 10;
             // 
             // CadastroImovel
             // 
@@ -259,5 +311,7 @@
         private ReaLTaiizor.Controls.MaterialComboBox cboTipoImovel;
         private ReaLTaiizor.Controls.MaterialCheckBox chkDisponivel;
         private ReaLTaiizor.Controls.MaterialMaskedTextBox txtPrecoAluguel;
+        private ReaLTaiizor.Controls.MaterialComboBox cboProprietario;
+        private ReaLTaiizor.Controls.MaterialComboBox cboCidade;
     }
 }

@@ -56,15 +56,15 @@
             // 
             // btnExcluir
             // 
-            btnExcluir.Location = new Point(565, 140);
+            btnExcluir.Location = new Point(504, -35);
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(486, 140);
+            btnEditar.Location = new Point(425, -35);
             // 
             // btnNovo
             // 
-            btnNovo.Location = new Point(414, 140);
+            btnNovo.Location = new Point(353, -35);
             // 
             // txtNome
             // 
@@ -74,7 +74,7 @@
             txtNome.BackgroundImageLayout = ImageLayout.None;
             txtNome.CharacterCasing = CharacterCasing.Normal;
             txtNome.Depth = 0;
-            txtNome.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtNome.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtNome.HideSelection = true;
             txtNome.Hint = "Nome";
             txtNome.LeadingIcon = null;
@@ -115,7 +115,7 @@
             txtId.Name = "txtId";
             txtId.PasswordChar = '\0';
             txtId.PrefixSuffixText = null;
-            txtId.ReadOnly = false;
+            txtId.ReadOnly = true;
             txtId.RightToLeft = RightToLeft.No;
             txtId.SelectedText = "";
             txtId.SelectionLength = 0;
@@ -137,7 +137,7 @@
             cboEstado.DropDownHeight = 174;
             cboEstado.DropDownStyle = ComboBoxStyle.DropDownList;
             cboEstado.DropDownWidth = 121;
-            cboEstado.Font = new Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboEstado.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
             cboEstado.ForeColor = Color.FromArgb(222, 0, 0, 0);
             cboEstado.FormattingEnabled = true;
             cboEstado.Hint = "Estado";

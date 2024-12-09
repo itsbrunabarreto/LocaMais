@@ -32,20 +32,12 @@ namespace LocaMais.Repository.Mapping
             builder.Property(prop => prop.Disponivel)
                 .IsRequired();
 
-            builder.HasOne(prop => prop.Proprietario)
-                .WithMany() 
-                .HasForeignKey("ProprietarioId") 
-                .IsRequired();
+            builder.HasOne(prop => prop.Proprietario);
 
-            builder.HasOne(prop => prop.TipoImovel)
-                .WithMany() 
-                .HasForeignKey("TipoImovelId") 
-                .IsRequired();
+            builder.HasOne(prop => prop.TipoImovel);
 
-            builder.HasOne(prop => prop.Cidade)
-                .WithMany() 
-                .HasForeignKey("CidadeId") 
-                .IsRequired();
+            builder.HasOne(prop => prop.Cidade);
+                
         }
     }
 
