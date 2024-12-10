@@ -32,20 +32,23 @@
             txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             TabControlCadastro.SuspendLayout();
             TabPageCadastro.SuspendLayout();
-            TabPageConsulta.SuspendLayout();
             SuspendLayout();
             // 
             // TabControlCadastro
             // 
-            TabControlCadastro.Size = new Size(657, 195);
+            TabControlCadastro.Size = new Size(614, 334);
             // 
             // TabPageCadastro
             // 
             TabPageCadastro.Controls.Add(txtId);
             TabPageCadastro.Controls.Add(txtNome);
-            TabPageCadastro.Size = new Size(649, 160);
+            TabPageCadastro.Size = new Size(606, 299);
             TabPageCadastro.Controls.SetChildIndex(txtNome, 0);
             TabPageCadastro.Controls.SetChildIndex(txtId, 0);
+            // 
+            // TabPageConsulta
+            // 
+            TabPageConsulta.Size = new Size(606, 299);
             // 
             // txtNome
             // 
@@ -59,7 +62,8 @@
             txtNome.HideSelection = true;
             txtNome.Hint = "Nome";
             txtNome.LeadingIcon = null;
-            txtNome.Location = new Point(136, 22);
+            txtNome.Location = new Point(119, 16);
+            txtNome.Margin = new Padding(3, 2, 3, 2);
             txtNome.MaxLength = 32767;
             txtNome.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtNome.Name = "txtNome";
@@ -71,8 +75,8 @@
             txtNome.SelectionLength = 0;
             txtNome.SelectionStart = 0;
             txtNome.ShortcutsEnabled = true;
-            txtNome.Size = new Size(490, 48);
-            txtNome.TabIndex = 2;
+            txtNome.Size = new Size(429, 48);
+            txtNome.TabIndex = 1;
             txtNome.TabStop = false;
             txtNome.TextAlign = HorizontalAlignment.Left;
             txtNome.TrailingIcon = null;
@@ -90,7 +94,8 @@
             txtId.HideSelection = true;
             txtId.Hint = "ID";
             txtId.LeadingIcon = null;
-            txtId.Location = new Point(22, 22);
+            txtId.Location = new Point(19, 16);
+            txtId.Margin = new Padding(3, 2, 3, 2);
             txtId.MaxLength = 32767;
             txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtId.Name = "txtId";
@@ -102,8 +107,8 @@
             txtId.SelectionLength = 0;
             txtId.SelectionStart = 0;
             txtId.ShortcutsEnabled = true;
-            txtId.Size = new Size(108, 48);
-            txtId.TabIndex = 3;
+            txtId.Size = new Size(94, 48);
+            txtId.TabIndex = 0;
             txtId.TabStop = false;
             txtId.TextAlign = HorizontalAlignment.Left;
             txtId.TrailingIcon = null;
@@ -111,17 +116,17 @@
             // 
             // CadastroTipoImovel
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(663, 262);
+            ClientSize = new Size(620, 400);
             Location = new Point(0, 0);
+            MaximumSize = new Size(620, 400);
+            MinimumSize = new Size(620, 400);
             Name = "CadastroTipoImovel";
             Text = "Cadastro Tipo de Imovel";
             TabControlCadastro.ResumeLayout(false);
             TabPageCadastro.ResumeLayout(false);
             TabPageCadastro.PerformLayout();
-            TabPageConsulta.ResumeLayout(false);
-            TabPageConsulta.PerformLayout();
             ResumeLayout(false);
         }
 

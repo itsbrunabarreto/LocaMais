@@ -19,7 +19,7 @@ namespace LocaMais.App.Cadastros
     {
         #region Declarações
         private readonly IBaseService<TipoImovel> _tipoImovelService;
-        private List<TipoImovel>? tiposImoveis;
+        private List<TipoImovelModel>? tiposImoveis;
         #endregion
 
         #region Construtor
@@ -79,7 +79,7 @@ namespace LocaMais.App.Cadastros
 
         protected override void CarregaGrid()
         {
-            tiposImoveis = _tipoImovelService.Get<TipoImovel>().ToList();
+            tiposImoveis = _tipoImovelService.Get<TipoImovelModel>().ToList();
             dataGridViewConsulta.DataSource = tiposImoveis;
             dataGridViewConsulta.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 

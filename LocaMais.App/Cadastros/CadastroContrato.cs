@@ -3,16 +3,7 @@ using LocaMais.App.Models;
 using LocaMais.Domain.Base;
 using LocaMais.Domain.Entities;
 using LocaMais.Service.Validators;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics.Contracts;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace LocaMais.App.Cadastros
 {
@@ -20,6 +11,7 @@ namespace LocaMais.App.Cadastros
     {
         #region Declaração
         private readonly IBaseService<Contrato> _contratoService;
+        private readonly IBaseService<Usuario> _usuarioService;
         private readonly IBaseService<Proprietario> _proprietarioService;
         private readonly IBaseService<Inquilino> _inquilinoService;
         private readonly IBaseService<Imovel> _imovelService;
@@ -28,9 +20,10 @@ namespace LocaMais.App.Cadastros
         #endregion
 
         #region Construtor
-        public CadastroContrato(IBaseService<Contrato> contratoService, IBaseService<Proprietario> proprietarioService, IBaseService<Inquilino> inquilinoService, IBaseService<Imovel> imovelService)
+        public CadastroContrato(IBaseService<Contrato> contratoService, IBaseService<Usuario> usuarioService, IBaseService<Proprietario> proprietarioService, IBaseService<Inquilino> inquilinoService, IBaseService<Imovel> imovelService)
         {
             _contratoService = contratoService;
+            _usuarioService  = usuarioService;
             _proprietarioService = proprietarioService;
             _inquilinoService = inquilinoService;
             _imovelService = imovelService;
@@ -43,22 +36,26 @@ namespace LocaMais.App.Cadastros
         #region Método
         private void CarregarCombo()
         {
+            cboUsuario.ValueMember = "Id";
+            cboUsuario.DisplayMember = "Nome";
+            cboUsuario.DataSource = _usuarioService.Get<Usuario>().ToList();
+
             cboInquilino.ValueMember = "Id";
-            cboInquilino.DisplayMember = "Inquilino";
+            cboInquilino.DisplayMember = "Nome";
             cboInquilino.DataSource = _inquilinoService.Get<InquilinoModel>().ToList();
 
             cboProprietario.ValueMember = "Id";
-            cboProprietario.DisplayMember = "Proprietario";
+            cboProprietario.DisplayMember = "Nome";
             cboProprietario.DataSource = _proprietarioService.Get<ProprietarioModel>().ToList();
 
             cboImovel.ValueMember = "Id";
-            cboImovel.DisplayMember = "Proprietario";
+            cboImovel.DisplayMember = "Nome";
             cboImovel.DataSource = _imovelService.Get<ImovelModel>().ToList();
         }
 
         private void PreencheObjeto(Contrato contrato)
         {
-            if (float.TryParse(txtValorAluguel.Text, out var valorAluguel))
+            if (float.TryParse(txtValorAluguel.Text.Replace("R$","").Trim(), out var valorAluguel))
             {
                 contrato.ValorAluguel = valorAluguel;
             }
@@ -69,6 +66,11 @@ namespace LocaMais.App.Cadastros
             if (DateTime.TryParse(txtDataFim.Text, out var dataFim))
             {
                 contrato.DataFim = dataFim;
+            }
+            if (int.TryParse(cboUsuario.SelectedValue.ToString(), out var idUsuario))
+            {
+                var usuario = _usuarioService.GetById<Usuario>(idUsuario);
+                contrato.Usuario = usuario;
             }
             if (int.TryParse(cboProprietario.SelectedValue.ToString(), out var idProprietario))
             {
@@ -82,7 +84,7 @@ namespace LocaMais.App.Cadastros
             }
             if (int.TryParse(cboImovel.SelectedValue.ToString(), out var idImovel))
             {
-                var imovel = _proprietarioService.GetById<Imovel>(idImovel);
+                var imovel = _imovelService.GetById<Imovel>(idImovel);
                 contrato.Imovel = imovel;
             }
         }
@@ -112,7 +114,10 @@ namespace LocaMais.App.Cadastros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, @"LocaMais", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                var errorMessage = ex.InnerException != null
+                    ? ex.InnerException.Message
+                    : ex.Message;
+                MessageBox.Show(errorMessage, @"LocaMais", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -130,10 +135,11 @@ namespace LocaMais.App.Cadastros
 
         protected override void CarregaGrid()
         {
-            contratos = _contratoService.Get<ContratoModel>(new[] { "Proprietario", "Inquilino", "Imovel" }).ToList();
+            contratos = _contratoService.Get<ContratoModel>(new[] {"Usuario", "Proprietario", "Inquilino", "Imovel" }).ToList();
             dataGridViewConsulta.DataSource = contratos;
 
-            dataGridViewConsulta.Columns["ValorAluguel"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewConsulta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewConsulta.Columns["IdUsuario"]!.Visible = false;
             dataGridViewConsulta.Columns["IdProprietario"]!.Visible = false;
             dataGridViewConsulta.Columns["IdInquilino"]!.Visible = false;
             dataGridViewConsulta.Columns["IdImovel"]!.Visible = false;
@@ -143,14 +149,14 @@ namespace LocaMais.App.Cadastros
         protected override void CarregaRegistro(DataGridViewRow? linha)
         {
             txtId.Text = linha?.Cells["Id"].Value.ToString();
-            
+            cboUsuario.Text = linha?.Cells["Usuario"].Value.ToString();
             cboInquilino.Text = linha?.Cells["Inquilino"].Value.ToString();
             cboProprietario.Text = linha?.Cells["Proprietario"].Value.ToString();
             cboImovel.Text = linha?.Cells["Imovel"].Value.ToString();
-            txtDataInicio.Text = DateTime.TryParse(linha?.Cells["DataCompra"].Value.ToString(), out var dataI)
+            txtDataInicio.Text = DateTime.TryParse(linha?.Cells["DataInicio"].Value.ToString(), out var dataI)
                ? dataI.ToString("g")
                : "";
-            txtDataFim.Text = DateTime.TryParse(linha?.Cells["DataCompra"].Value.ToString(), out var dataF)
+            txtDataFim.Text = DateTime.TryParse(linha?.Cells["DataFim"].Value.ToString(), out var dataF)
                ? dataF.ToString("g")
                : "";
         }

@@ -9,14 +9,17 @@ namespace LocaMais.App.Models
 {
     public class ContratoModel
     {
+        public int Id { get; set; }
         public float ValorAluguel { get; set; }
         public DateTime DataInicio { get; set; }
         public DateTime DataFim { get; set; }
-        public int? IdImovel { get; set; }
-        public string? Imovel { get; set; }
-        public int? IdInquilino { get; set; }
-        public string? Inquilino { get; set; }
-        public int? IdProprietario { get; set; }
-        public string? Proprietario { get; set; }
+        public int IdImovel { get; set; }
+        public string Imovel { get; set; }
+        public int IdInquilino { get; set; }
+        public string Inquilino { get; set; }
+        public int IdProprietario { get; set; }
+        public string Proprietario { get; set; }
+        public int IdUsuario { get; set; }
+        public string Usuario { get; set; }
     }
 }

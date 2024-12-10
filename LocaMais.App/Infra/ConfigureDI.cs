@@ -27,7 +27,7 @@ namespace LocaMais.App.Infra
             Services = new ServiceCollection();
 
             #region Banco de Dados
-            var strCon = File.ReadAllText(@"C:\Users\bruna\Downloads\POEE\LocaMais\LocaMais.App\Config\ConfigBanco.txt");
+            var strCon = File.ReadAllText(@"Config\ConfigBanco.txt");
 
             Services.AddDbContext<MySqlContext>(options =>
             {
@@ -105,7 +105,9 @@ namespace LocaMais.App.Infra
                .ForMember(c => c.Proprietario, c => c.MapFrom(x => x.Proprietario!.Nome))
                .ForMember(c => c.IdProprietario, c => c.MapFrom(x => x.Proprietario!.Id))
                .ForMember(c => c.Imovel, c => c.MapFrom(x => x.Imovel!.Nome))
-               .ForMember(c => c.IdImovel, c => c.MapFrom(x => x.Imovel!.Id));
+               .ForMember(c => c.IdImovel, c => c.MapFrom(x => x.Imovel!.Id))
+               .ForMember(c => c.IdUsuario, c => c.MapFrom(x => x.Usuario!.Id))
+               .ForMember(c => c.Usuario, c => c.MapFrom(x => x.Usuario!.Nome));
 
 
 

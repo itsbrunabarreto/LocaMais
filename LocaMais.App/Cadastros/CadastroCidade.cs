@@ -75,7 +75,7 @@ namespace LocaMais.App.Cadastros
         {
             cidades = _cidadeService.Get<CidadeModel>().ToList();
             dataGridViewConsulta.DataSource = cidades;
-            dataGridViewConsulta.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewConsulta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         protected override void CarregaRegistro(DataGridViewRow? linha)
@@ -85,5 +85,7 @@ namespace LocaMais.App.Cadastros
             cboEstado.Text = linha?.Cells["Estado"].Value.ToString();
         }
         #endregion
+
+
     }
 }

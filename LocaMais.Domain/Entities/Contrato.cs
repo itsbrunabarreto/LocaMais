@@ -29,8 +29,9 @@ namespace LocaMais.Domain.Entities
         public DateTime? DataFim { get; set; }
         public Imovel? Imovel { get; set; }
         public Inquilino? Inquilino { get; set; }
-        public Proprietario? Proprietario { get; set; } 
-        
+        public Proprietario? Proprietario { get; set; }
+        public virtual Usuario? Usuario { get; set; }
+
 
     }
 }

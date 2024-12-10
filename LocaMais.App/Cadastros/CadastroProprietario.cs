@@ -103,8 +103,9 @@ namespace LocaMais.App.Cadastros
         {
             proprietarios = _proprietarioService.Get<ProprietarioModel>(new[] { "Cidade" }).ToList();
             dataGridViewConsulta.DataSource = proprietarios;
-            dataGridViewConsulta.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewConsulta.Columns["IdCidade"]!.Visible = false;
+            dataGridViewConsulta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
         }
 
         protected override void CarregaRegistro(DataGridViewRow? linha)

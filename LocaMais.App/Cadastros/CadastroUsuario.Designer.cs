@@ -38,12 +38,12 @@
             txtDataLogin = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             TabControlCadastro.SuspendLayout();
             TabPageCadastro.SuspendLayout();
-            TabPageConsulta.SuspendLayout();
             SuspendLayout();
             // 
             // TabControlCadastro
             // 
-            TabControlCadastro.Size = new Size(770, 378);
+            TabControlCadastro.Location = new Point(3, 36);
+            TabControlCadastro.Size = new Size(724, 382);
             // 
             // TabPageCadastro
             // 
@@ -55,7 +55,7 @@
             TabPageCadastro.Controls.Add(txtSenha);
             TabPageCadastro.Controls.Add(txtLogin);
             TabPageCadastro.Controls.Add(txtNome);
-            TabPageCadastro.Size = new Size(762, 343);
+            TabPageCadastro.Size = new Size(716, 347);
             TabPageCadastro.Controls.SetChildIndex(txtNome, 0);
             TabPageCadastro.Controls.SetChildIndex(txtLogin, 0);
             TabPageCadastro.Controls.SetChildIndex(txtSenha, 0);
@@ -67,19 +67,7 @@
             // 
             // TabPageConsulta
             // 
-            TabPageConsulta.Size = new Size(762, 343);
-            // 
-            // btnExcluir
-            // 
-            btnExcluir.Location = new Point(674, 272);
-            // 
-            // btnEditar
-            // 
-            btnEditar.Location = new Point(667, 272);
-            // 
-            // btnNovo
-            // 
-            btnNovo.Location = new Point(595, 272);
+            TabPageConsulta.Size = new Size(723, 354);
             // 
             // txtNome
             // 
@@ -93,7 +81,8 @@
             txtNome.HideSelection = true;
             txtNome.Hint = "Nome";
             txtNome.LeadingIcon = null;
-            txtNome.Location = new Point(27, 20);
+            txtNome.Location = new Point(24, 15);
+            txtNome.Margin = new Padding(3, 2, 3, 2);
             txtNome.MaxLength = 32767;
             txtNome.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtNome.Name = "txtNome";
@@ -105,7 +94,7 @@
             txtNome.SelectionLength = 0;
             txtNome.SelectionStart = 0;
             txtNome.ShortcutsEnabled = true;
-            txtNome.Size = new Size(575, 48);
+            txtNome.Size = new Size(503, 48);
             txtNome.TabIndex = 2;
             txtNome.TabStop = false;
             txtNome.TextAlign = HorizontalAlignment.Left;
@@ -124,7 +113,8 @@
             txtLogin.HideSelection = true;
             txtLogin.Hint = "Login";
             txtLogin.LeadingIcon = null;
-            txtLogin.Location = new Point(27, 89);
+            txtLogin.Location = new Point(24, 67);
+            txtLogin.Margin = new Padding(3, 2, 3, 2);
             txtLogin.MaxLength = 32767;
             txtLogin.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtLogin.Name = "txtLogin";
@@ -136,7 +126,7 @@
             txtLogin.SelectionLength = 0;
             txtLogin.SelectionStart = 0;
             txtLogin.ShortcutsEnabled = true;
-            txtLogin.Size = new Size(480, 48);
+            txtLogin.Size = new Size(420, 48);
             txtLogin.TabIndex = 3;
             txtLogin.TabStop = false;
             txtLogin.TextAlign = HorizontalAlignment.Left;
@@ -155,7 +145,8 @@
             txtSenha.HideSelection = true;
             txtSenha.Hint = "Senha";
             txtSenha.LeadingIcon = null;
-            txtSenha.Location = new Point(528, 89);
+            txtSenha.Location = new Point(462, 67);
+            txtSenha.Margin = new Padding(3, 2, 3, 2);
             txtSenha.MaxLength = 32767;
             txtSenha.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtSenha.Name = "txtSenha";
@@ -167,7 +158,7 @@
             txtSenha.SelectionLength = 0;
             txtSenha.SelectionStart = 0;
             txtSenha.ShortcutsEnabled = true;
-            txtSenha.Size = new Size(220, 48);
+            txtSenha.Size = new Size(192, 48);
             txtSenha.TabIndex = 4;
             txtSenha.TabStop = false;
             txtSenha.TextAlign = HorizontalAlignment.Left;
@@ -186,7 +177,8 @@
             txtId.HideSelection = true;
             txtId.Hint = "ID";
             txtId.LeadingIcon = null;
-            txtId.Location = new Point(628, 20);
+            txtId.Location = new Point(550, 15);
+            txtId.Margin = new Padding(3, 2, 3, 2);
             txtId.MaxLength = 32767;
             txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtId.Name = "txtId";
@@ -198,7 +190,7 @@
             txtId.SelectionLength = 0;
             txtId.SelectionStart = 0;
             txtId.ShortcutsEnabled = true;
-            txtId.Size = new Size(120, 48);
+            txtId.Size = new Size(105, 48);
             txtId.TabIndex = 5;
             txtId.TabStop = false;
             txtId.TextAlign = HorizontalAlignment.Left;
@@ -217,7 +209,8 @@
             txtEmail.HideSelection = true;
             txtEmail.Hint = "Email";
             txtEmail.LeadingIcon = null;
-            txtEmail.Location = new Point(27, 153);
+            txtEmail.Location = new Point(24, 115);
+            txtEmail.Margin = new Padding(3, 2, 3, 2);
             txtEmail.MaxLength = 32767;
             txtEmail.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtEmail.Name = "txtEmail";
@@ -229,7 +222,7 @@
             txtEmail.SelectionLength = 0;
             txtEmail.SelectionStart = 0;
             txtEmail.ShortcutsEnabled = true;
-            txtEmail.Size = new Size(480, 48);
+            txtEmail.Size = new Size(420, 48);
             txtEmail.TabIndex = 6;
             txtEmail.TabStop = false;
             txtEmail.TextAlign = HorizontalAlignment.Left;
@@ -240,7 +233,7 @@
             // 
             chkStatus.AutoSize = true;
             chkStatus.Depth = 0;
-            chkStatus.Location = new Point(551, 158);
+            chkStatus.Location = new Point(482, 118);
             chkStatus.Margin = new Padding(0);
             chkStatus.MouseLocation = new Point(-1, -1);
             chkStatus.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -265,7 +258,8 @@
             txtDataCadastro.HideSelection = true;
             txtDataCadastro.Hint = "Data de Cadastro";
             txtDataCadastro.LeadingIcon = null;
-            txtDataCadastro.Location = new Point(27, 218);
+            txtDataCadastro.Location = new Point(24, 164);
+            txtDataCadastro.Margin = new Padding(3, 2, 3, 2);
             txtDataCadastro.MaxLength = 32767;
             txtDataCadastro.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtDataCadastro.Name = "txtDataCadastro";
@@ -277,7 +271,7 @@
             txtDataCadastro.SelectionLength = 0;
             txtDataCadastro.SelectionStart = 0;
             txtDataCadastro.ShortcutsEnabled = true;
-            txtDataCadastro.Size = new Size(355, 48);
+            txtDataCadastro.Size = new Size(311, 48);
             txtDataCadastro.TabIndex = 8;
             txtDataCadastro.TabStop = false;
             txtDataCadastro.TextAlign = HorizontalAlignment.Left;
@@ -296,7 +290,8 @@
             txtDataLogin.HideSelection = true;
             txtDataLogin.Hint = "Data de Último Login";
             txtDataLogin.LeadingIcon = null;
-            txtDataLogin.Location = new Point(393, 218);
+            txtDataLogin.Location = new Point(344, 164);
+            txtDataLogin.Margin = new Padding(3, 2, 3, 2);
             txtDataLogin.MaxLength = 32767;
             txtDataLogin.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtDataLogin.Name = "txtDataLogin";
@@ -308,7 +303,7 @@
             txtDataLogin.SelectionLength = 0;
             txtDataLogin.SelectionStart = 0;
             txtDataLogin.ShortcutsEnabled = true;
-            txtDataLogin.Size = new Size(355, 48);
+            txtDataLogin.Size = new Size(311, 48);
             txtDataLogin.TabIndex = 9;
             txtDataLogin.TabStop = false;
             txtDataLogin.TextAlign = HorizontalAlignment.Left;
@@ -317,17 +312,18 @@
             // 
             // CadastroUsuario
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(776, 445);
+            ClientSize = new Size(730, 420);
             Location = new Point(0, 0);
+            MaximumSize = new Size(730, 420);
+            MinimumSize = new Size(730, 420);
             Name = "CadastroUsuario";
+            Padding = new Padding(3, 36, 3, 2);
             Text = "Cadastro de Usuario";
             TabControlCadastro.ResumeLayout(false);
             TabPageCadastro.ResumeLayout(false);
             TabPageCadastro.PerformLayout();
-            TabPageConsulta.ResumeLayout(false);
-            TabPageConsulta.PerformLayout();
             ResumeLayout(false);
         }
 

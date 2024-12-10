@@ -28,74 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtNome = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            txtNome = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             cboEstado = new ReaLTaiizor.Controls.MaterialComboBox();
             TabControlCadastro.SuspendLayout();
             TabPageCadastro.SuspendLayout();
-            TabPageConsulta.SuspendLayout();
             SuspendLayout();
             // 
             // TabControlCadastro
             // 
-            TabControlCadastro.Size = new Size(661, 227);
+            TabControlCadastro.Location = new Point(3, 36);
+            TabControlCadastro.Size = new Size(651, 309);
             // 
             // TabPageCadastro
             // 
             TabPageCadastro.Controls.Add(cboEstado);
-            TabPageCadastro.Controls.Add(txtId);
             TabPageCadastro.Controls.Add(txtNome);
-            TabPageCadastro.Size = new Size(653, 192);
-            TabPageCadastro.Controls.SetChildIndex(txtNome, 0);
+            TabPageCadastro.Controls.Add(txtId);
+            TabPageCadastro.Location = new Point(4, 31);
+            TabPageCadastro.Size = new Size(585, 131);
             TabPageCadastro.Controls.SetChildIndex(txtId, 0);
+            TabPageCadastro.Controls.SetChildIndex(txtNome, 0);
             TabPageCadastro.Controls.SetChildIndex(cboEstado, 0);
             // 
             // TabPageConsulta
             // 
-            TabPageConsulta.Size = new Size(653, 192);
-            // 
-            // btnExcluir
-            // 
-            btnExcluir.Location = new Point(504, -35);
-            // 
-            // btnEditar
-            // 
-            btnEditar.Location = new Point(425, -35);
-            // 
-            // btnNovo
-            // 
-            btnNovo.Location = new Point(353, -35);
-            // 
-            // txtNome
-            // 
-            txtNome.AnimateReadOnly = false;
-            txtNome.AutoCompleteMode = AutoCompleteMode.None;
-            txtNome.AutoCompleteSource = AutoCompleteSource.None;
-            txtNome.BackgroundImageLayout = ImageLayout.None;
-            txtNome.CharacterCasing = CharacterCasing.Normal;
-            txtNome.Depth = 0;
-            txtNome.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtNome.HideSelection = true;
-            txtNome.Hint = "Nome";
-            txtNome.LeadingIcon = null;
-            txtNome.Location = new Point(120, 39);
-            txtNome.MaxLength = 32767;
-            txtNome.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            txtNome.Name = "txtNome";
-            txtNome.PasswordChar = '\0';
-            txtNome.PrefixSuffixText = null;
-            txtNome.ReadOnly = false;
-            txtNome.RightToLeft = RightToLeft.No;
-            txtNome.SelectedText = "";
-            txtNome.SelectionLength = 0;
-            txtNome.SelectionStart = 0;
-            txtNome.ShortcutsEnabled = true;
-            txtNome.Size = new Size(342, 48);
-            txtNome.TabIndex = 2;
-            txtNome.TabStop = false;
-            txtNome.TextAlign = HorizontalAlignment.Left;
-            txtNome.TrailingIcon = null;
-            txtNome.UseSystemPasswordChar = false;
+            TabPageConsulta.Location = new Point(4, 31);
+            TabPageConsulta.Size = new Size(643, 274);
             // 
             // txtId
             // 
@@ -109,7 +68,8 @@
             txtId.HideSelection = true;
             txtId.Hint = "ID";
             txtId.LeadingIcon = null;
-            txtId.Location = new Point(25, 39);
+            txtId.Location = new Point(22, 19);
+            txtId.Margin = new Padding(3, 2, 3, 2);
             txtId.MaxLength = 32767;
             txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtId.Name = "txtId";
@@ -121,12 +81,44 @@
             txtId.SelectionLength = 0;
             txtId.SelectionStart = 0;
             txtId.ShortcutsEnabled = true;
-            txtId.Size = new Size(89, 48);
-            txtId.TabIndex = 3;
+            txtId.Size = new Size(80, 48);
+            txtId.TabIndex = 2;
             txtId.TabStop = false;
             txtId.TextAlign = HorizontalAlignment.Left;
             txtId.TrailingIcon = null;
             txtId.UseSystemPasswordChar = false;
+            // 
+            // txtNome
+            // 
+            txtNome.AnimateReadOnly = false;
+            txtNome.AutoCompleteMode = AutoCompleteMode.None;
+            txtNome.AutoCompleteSource = AutoCompleteSource.None;
+            txtNome.BackgroundImageLayout = ImageLayout.None;
+            txtNome.CharacterCasing = CharacterCasing.Normal;
+            txtNome.Depth = 0;
+            txtNome.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtNome.HideSelection = true;
+            txtNome.Hint = "Nome";
+            txtNome.LeadingIcon = null;
+            txtNome.Location = new Point(117, 19);
+            txtNome.Margin = new Padding(3, 2, 3, 2);
+            txtNome.MaxLength = 32767;
+            txtNome.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            txtNome.Name = "txtNome";
+            txtNome.PasswordChar = '\0';
+            txtNome.PrefixSuffixText = null;
+            txtNome.ReadOnly = false;
+            txtNome.RightToLeft = RightToLeft.No;
+            txtNome.SelectedText = "";
+            txtNome.SelectionLength = 0;
+            txtNome.SelectionStart = 0;
+            txtNome.ShortcutsEnabled = true;
+            txtNome.Size = new Size(303, 48);
+            txtNome.TabIndex = 3;
+            txtNome.TabStop = false;
+            txtNome.TextAlign = HorizontalAlignment.Left;
+            txtNome.TrailingIcon = null;
+            txtNome.UseSystemPasswordChar = false;
             // 
             // cboEstado
             // 
@@ -144,34 +136,34 @@
             cboEstado.IntegralHeight = false;
             cboEstado.ItemHeight = 43;
             cboEstado.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
-            cboEstado.Location = new Point(479, 39);
+            cboEstado.Location = new Point(437, 18);
+            cboEstado.Margin = new Padding(3, 2, 3, 2);
             cboEstado.MaxDropDownItems = 4;
             cboEstado.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cboEstado.Name = "cboEstado";
-            cboEstado.Size = new Size(151, 49);
+            cboEstado.Size = new Size(133, 49);
             cboEstado.StartIndex = 0;
             cboEstado.TabIndex = 4;
             // 
             // CadastroCidade
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(667, 294);
+            ClientSize = new Size(657, 347);
             Location = new Point(0, 0);
             Name = "CadastroCidade";
+            Padding = new Padding(3, 36, 3, 2);
             Text = "Cadastro de Cidade";
             TabControlCadastro.ResumeLayout(false);
             TabPageCadastro.ResumeLayout(false);
             TabPageCadastro.PerformLayout();
-            TabPageConsulta.ResumeLayout(false);
-            TabPageConsulta.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private ReaLTaiizor.Controls.MaterialComboBox cboEstado;
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtId;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtNome;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtId;
     }
 }

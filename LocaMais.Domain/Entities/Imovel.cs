@@ -32,7 +32,6 @@ namespace LocaMais.Domain.Entities
         public bool? Disponivel { get; set; }
         public Proprietario? Proprietario { get; set; }
         public TipoImovel? TipoImovel { get; set; }
-        public Cidade? Cidade { get; set; }
-        
+        public Cidade? Cidade { get; set; }        
     }
 }

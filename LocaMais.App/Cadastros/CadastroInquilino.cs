@@ -95,8 +95,9 @@ namespace LocaMais.App.Cadastros
         {
             inquilinos = _inquilinoService.Get<InquilinoModel>(new[] { "Cidade" }).ToList();
             dataGridViewConsulta.DataSource = inquilinos;
-            dataGridViewConsulta.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewConsulta.Columns["IdCidade"]!.Visible = false;
+            dataGridViewConsulta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
         }
 
         protected override void CarregaRegistro(DataGridViewRow? linha)

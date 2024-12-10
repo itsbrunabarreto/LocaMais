@@ -9,6 +9,7 @@ namespace LocaMais.App.Models
 {
     public class ImovelModel
     {
+        public int Id { get; set; }
         public string Nome { get; set; }
         public string Endereco { get; set; }
         public float PrecoAluguel { get; set; }

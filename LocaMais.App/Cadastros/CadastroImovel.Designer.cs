@@ -38,12 +38,11 @@
             cboProprietario = new ReaLTaiizor.Controls.MaterialComboBox();
             TabControlCadastro.SuspendLayout();
             TabPageCadastro.SuspendLayout();
-            TabPageConsulta.SuspendLayout();
             SuspendLayout();
             // 
             // TabControlCadastro
             // 
-            TabControlCadastro.Size = new Size(794, 383);
+            TabControlCadastro.Size = new Size(704, 384);
             // 
             // TabPageCadastro
             // 
@@ -55,7 +54,7 @@
             TabPageCadastro.Controls.Add(txtEndereco);
             TabPageCadastro.Controls.Add(txtId);
             TabPageCadastro.Controls.Add(txtNome);
-            TabPageCadastro.Size = new Size(786, 348);
+            TabPageCadastro.Size = new Size(696, 349);
             TabPageCadastro.Controls.SetChildIndex(txtNome, 0);
             TabPageCadastro.Controls.SetChildIndex(txtId, 0);
             TabPageCadastro.Controls.SetChildIndex(txtEndereco, 0);
@@ -77,7 +76,8 @@
             txtNome.HideSelection = true;
             txtNome.Hint = "Nome";
             txtNome.LeadingIcon = null;
-            txtNome.Location = new Point(164, 31);
+            txtNome.Location = new Point(144, 23);
+            txtNome.Margin = new Padding(3, 2, 3, 2);
             txtNome.MaxLength = 32767;
             txtNome.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtNome.Name = "txtNome";
@@ -89,8 +89,8 @@
             txtNome.SelectionLength = 0;
             txtNome.SelectionStart = 0;
             txtNome.ShortcutsEnabled = true;
-            txtNome.Size = new Size(599, 48);
-            txtNome.TabIndex = 2;
+            txtNome.Size = new Size(545, 48);
+            txtNome.TabIndex = 1;
             txtNome.TabStop = false;
             txtNome.TextAlign = HorizontalAlignment.Left;
             txtNome.TrailingIcon = null;
@@ -108,7 +108,8 @@
             txtId.HideSelection = true;
             txtId.Hint = "ID";
             txtId.LeadingIcon = null;
-            txtId.Location = new Point(30, 31);
+            txtId.Location = new Point(26, 23);
+            txtId.Margin = new Padding(3, 2, 3, 2);
             txtId.MaxLength = 32767;
             txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtId.Name = "txtId";
@@ -120,8 +121,8 @@
             txtId.SelectionLength = 0;
             txtId.SelectionStart = 0;
             txtId.ShortcutsEnabled = true;
-            txtId.Size = new Size(115, 48);
-            txtId.TabIndex = 3;
+            txtId.Size = new Size(101, 48);
+            txtId.TabIndex = 0;
             txtId.TabStop = false;
             txtId.TextAlign = HorizontalAlignment.Left;
             txtId.TrailingIcon = null;
@@ -139,7 +140,8 @@
             txtEndereco.HideSelection = true;
             txtEndereco.Hint = "Endereço";
             txtEndereco.LeadingIcon = null;
-            txtEndereco.Location = new Point(30, 95);
+            txtEndereco.Location = new Point(26, 71);
+            txtEndereco.Margin = new Padding(3, 2, 3, 2);
             txtEndereco.MaxLength = 32767;
             txtEndereco.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtEndereco.Name = "txtEndereco";
@@ -151,8 +153,8 @@
             txtEndereco.SelectionLength = 0;
             txtEndereco.SelectionStart = 0;
             txtEndereco.ShortcutsEnabled = true;
-            txtEndereco.Size = new Size(593, 48);
-            txtEndereco.TabIndex = 4;
+            txtEndereco.Size = new Size(519, 48);
+            txtEndereco.TabIndex = 2;
             txtEndereco.TabStop = false;
             txtEndereco.TextAlign = HorizontalAlignment.Left;
             txtEndereco.TrailingIcon = null;
@@ -173,8 +175,9 @@
             txtPrecoAluguel.Hint = "Preço Aluguel";
             txtPrecoAluguel.InsertKeyMode = InsertKeyMode.Default;
             txtPrecoAluguel.LeadingIcon = null;
-            txtPrecoAluguel.Location = new Point(461, 163);
-            txtPrecoAluguel.Mask = "$ 999,999,99";
+            txtPrecoAluguel.Location = new Point(402, 137);
+            txtPrecoAluguel.Margin = new Padding(3, 2, 3, 2);
+            txtPrecoAluguel.Mask = "999,999.99";
             txtPrecoAluguel.MaxLength = 32767;
             txtPrecoAluguel.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtPrecoAluguel.Name = "txtPrecoAluguel";
@@ -190,11 +193,11 @@
             txtPrecoAluguel.SelectionLength = 0;
             txtPrecoAluguel.SelectionStart = 0;
             txtPrecoAluguel.ShortcutsEnabled = true;
-            txtPrecoAluguel.Size = new Size(302, 48);
+            txtPrecoAluguel.Size = new Size(287, 48);
             txtPrecoAluguel.SkipLiterals = true;
-            txtPrecoAluguel.TabIndex = 6;
+            txtPrecoAluguel.TabIndex = 5;
             txtPrecoAluguel.TabStop = false;
-            txtPrecoAluguel.Text = "R$    .   .";
+            txtPrecoAluguel.Text = "   .   ,";
             txtPrecoAluguel.TextAlign = HorizontalAlignment.Left;
             txtPrecoAluguel.TextMaskFormat = MaskFormat.IncludeLiterals;
             txtPrecoAluguel.TrailingIcon = null;
@@ -205,7 +208,7 @@
             // 
             chkDisponivel.AutoSize = true;
             chkDisponivel.Depth = 0;
-            chkDisponivel.Location = new Point(643, 102);
+            chkDisponivel.Location = new Point(563, 76);
             chkDisponivel.Margin = new Padding(0);
             chkDisponivel.MouseLocation = new Point(-1, -1);
             chkDisponivel.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -213,7 +216,7 @@
             chkDisponivel.ReadOnly = false;
             chkDisponivel.Ripple = true;
             chkDisponivel.Size = new Size(109, 37);
-            chkDisponivel.TabIndex = 7;
+            chkDisponivel.TabIndex = 3;
             chkDisponivel.Text = "Disponível";
             chkDisponivel.UseAccentColor = false;
             chkDisponivel.UseVisualStyleBackColor = true;
@@ -233,13 +236,14 @@
             cboTipoImovel.Hint = "Tipo de Imóvel";
             cboTipoImovel.IntegralHeight = false;
             cboTipoImovel.ItemHeight = 43;
-            cboTipoImovel.Location = new Point(30, 162);
+            cboTipoImovel.Location = new Point(25, 137);
+            cboTipoImovel.Margin = new Padding(3, 2, 3, 2);
             cboTipoImovel.MaxDropDownItems = 4;
             cboTipoImovel.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cboTipoImovel.Name = "cboTipoImovel";
-            cboTipoImovel.Size = new Size(406, 49);
+            cboTipoImovel.Size = new Size(356, 49);
             cboTipoImovel.StartIndex = 0;
-            cboTipoImovel.TabIndex = 8;
+            cboTipoImovel.TabIndex = 4;
             // 
             // cboCidade
             // 
@@ -256,13 +260,14 @@
             cboCidade.Hint = "Cidade/Estado";
             cboCidade.IntegralHeight = false;
             cboCidade.ItemHeight = 43;
-            cboCidade.Location = new Point(527, 226);
+            cboCidade.Location = new Point(465, 206);
+            cboCidade.Margin = new Padding(3, 2, 3, 2);
             cboCidade.MaxDropDownItems = 4;
             cboCidade.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cboCidade.Name = "cboCidade";
-            cboCidade.Size = new Size(236, 49);
+            cboCidade.Size = new Size(224, 49);
             cboCidade.StartIndex = 0;
-            cboCidade.TabIndex = 9;
+            cboCidade.TabIndex = 7;
             // 
             // cboProprietario
             // 
@@ -279,27 +284,28 @@
             cboProprietario.Hint = "Proprietário";
             cboProprietario.IntegralHeight = false;
             cboProprietario.ItemHeight = 43;
-            cboProprietario.Location = new Point(30, 226);
+            cboProprietario.Location = new Point(24, 206);
+            cboProprietario.Margin = new Padding(3, 2, 3, 2);
             cboProprietario.MaxDropDownItems = 4;
             cboProprietario.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cboProprietario.Name = "cboProprietario";
-            cboProprietario.Size = new Size(474, 49);
+            cboProprietario.Size = new Size(415, 49);
             cboProprietario.StartIndex = 0;
-            cboProprietario.TabIndex = 10;
+            cboProprietario.TabIndex = 6;
             // 
             // CadastroImovel
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            ClientSize = new Size(710, 450);
             Location = new Point(0, 0);
+            MaximumSize = new Size(710, 450);
+            MinimumSize = new Size(710, 450);
             Name = "CadastroImovel";
             Text = "Cadastro de Imóvel";
             TabControlCadastro.ResumeLayout(false);
             TabPageCadastro.ResumeLayout(false);
             TabPageCadastro.PerformLayout();
-            TabPageConsulta.ResumeLayout(false);
-            TabPageConsulta.PerformLayout();
             ResumeLayout(false);
         }
 

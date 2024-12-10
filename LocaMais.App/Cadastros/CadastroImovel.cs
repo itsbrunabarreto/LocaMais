@@ -3,15 +3,6 @@ using LocaMais.App.Models;
 using LocaMais.Domain.Base;
 using LocaMais.Domain.Entities;
 using LocaMais.Service.Validators;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace LocaMais.App.Cadastros
 {
@@ -105,7 +96,10 @@ namespace LocaMais.App.Cadastros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, @"LocaMais", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                var errorMessage = ex.InnerException != null
+                    ? ex.InnerException.Message
+                    : ex.Message;
+                MessageBox.Show(errorMessage, @"LocaMais", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -123,12 +117,12 @@ namespace LocaMais.App.Cadastros
 
         protected override void CarregaGrid()
         {
-            
-            imoveis = _imovelService.Get<ImovelModel>(new[] { "Cidade", "TipoImovel", "Proprietario" }).ToList();
+
+            imoveis = _imovelService.Get<ImovelModel>(new[] { "Cidade", "TipoImovel", "Proprietario" }).ToList();           
 
             dataGridViewConsulta.DataSource = imoveis;
 
-            dataGridViewConsulta.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewConsulta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             dataGridViewConsulta.Columns["IdCidade"]!.Visible = false;
             dataGridViewConsulta.Columns["IdTipoImovel"]!.Visible = false;
@@ -140,13 +134,12 @@ namespace LocaMais.App.Cadastros
             txtId.Text = linha?.Cells["Id"].Value.ToString();
             txtNome.Text = linha?.Cells["Nome"].Value.ToString();
             txtPrecoAluguel.Text = linha?.Cells["PrecoAluguel"].Value.ToString();
-            txtEndereco.Text = linha?.Cells["Endereço"].Value.ToString();
+            txtEndereco.Text = linha?.Cells["Endereco"].Value.ToString();
             chkDisponivel.Checked = (bool)(linha?.Cells["Disponivel"].Value ?? false);
 
             cboCidade.Text = linha?.Cells["Cidade"].Value.ToString();
             cboTipoImovel.Text = linha?.Cells["TipoImovel"].Value.ToString();
             cboProprietario.Text = linha?.Cells["Proprietario"].Value.ToString();
-
         }
         #endregion
     }

@@ -52,6 +52,7 @@ namespace LocaMais.App.Cadastros
                 {
                     var usuario = new Usuario();
                     PreencheObjeto(usuario);
+                    usuario.DataLogin = DateTime.Now;
                     _usuarioService.Add<Usuario, Usuario, UsuarioValidator>(usuario);
                 }
                 TabControlCadastro.SelectedIndex = 1;
@@ -70,8 +71,12 @@ namespace LocaMais.App.Cadastros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, @"LocaMais", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                var errorMessage = ex.InnerException != null
+                    ? ex.InnerException.Message
+                    : ex.Message;
+                MessageBox.Show(errorMessage, @"IFSP Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         protected override void CarregaGrid()
@@ -89,7 +94,7 @@ namespace LocaMais.App.Cadastros
             txtLogin.Text = linha?.Cells["Login"].Value.ToString();
             txtEmail.Text = linha?.Cells["Email"].Value.ToString();
             txtSenha.Text = linha?.Cells["Senha"].Value.ToString();
-            chkStatus.Checked = (bool)(linha?.Cells["Ativo"].Value ?? false);
+            chkStatus.Checked = (bool)(linha?.Cells["Status"].Value ?? false);
 
             txtDataCadastro.Text = DateTime.TryParse(linha?.Cells["DataCadastro"].Value.ToString(), out var dataC)
                 ? dataC.ToString("g")
