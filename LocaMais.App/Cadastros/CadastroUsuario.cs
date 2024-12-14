@@ -74,7 +74,7 @@ namespace LocaMais.App.Cadastros
                 var errorMessage = ex.InnerException != null
                     ? ex.InnerException.Message
                     : ex.Message;
-                MessageBox.Show(errorMessage, @"IFSP Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(errorMessage, @"LocaMais", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
